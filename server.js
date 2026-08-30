@@ -36,7 +36,7 @@ connectDB();
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Server is running!");
+  res.send("Server is running on port 3001 !!!");
 });
 
 app.get("/hello", (req, res) => {
