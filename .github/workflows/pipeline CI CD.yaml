@@ -1,7 +1,7 @@
 name: Test & deploy
 
 env:
-  IMAGE_Name:  ${{ vars.DOCKERHUB_USERNAME }}/back-session18
+  IMAGE_NAME: ${{ vars.DOCKERHUB_USERNAME }}/back-session18
 
 on:
     push: 
