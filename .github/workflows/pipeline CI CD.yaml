@@ -1,0 +1,14 @@
+name: Test & deploy
+
+on:
+    push: 
+          branches: main
+
+jobs:
+    # unit test
+    unit-test:
+        runs-on: ubuntu-latest 
+        steps: 
+             - name: clone repo
+               uses: actions/checkout@v7                 
+             - run: ls -al
