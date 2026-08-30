@@ -39,4 +39,4 @@ jobs:
                   password: ${{ secrets.DOCKERHUB_TOKEN }}
 
              - name: push image
-               run: docker push hedilmaaoui/back-session18:v2
+               run: docker push hedilmaaoui/back-session18:v${{github.run_number}}
