@@ -27,7 +27,10 @@ jobs:
 
              - name: build image
                run: docker build -t hedilmaaoui/back-session18:v${{github.run_number}} .
-            
+
+             - name: tag latest image 
+               run: docker tag hedilmaaoui/back-session18:v${{github.run_number}} hedilmaaoui/back-session18:latest
+
              - name: check image
                run: docker images
 
@@ -38,5 +41,5 @@ jobs:
                   username: ${{ vars.DOCKERHUB_USERNAME }}
                   password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-             - name: push image
-               run: docker push hedilmaaoui/back-session18:v${{github.run_number}}
+             - name: push latest image
+               run: docker push hedilmaaoui/back-session18:latest
