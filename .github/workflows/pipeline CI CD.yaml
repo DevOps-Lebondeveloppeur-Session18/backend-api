@@ -57,4 +57,4 @@ jobs:
             password: ${{ secrets.VPS_PASSWORD }}
             script: |
               cd /home/user/devops-script/backend
-              docker compose up -d --force-recreate --pull always backend-api
+              sudo docker compose up -d --force-recreate --pull always backend-api
